@@ -1,0 +1,21 @@
+<h1 class="h1-title">{{title}}</h1>
+
+<div class="container">
+  <form>
+    <label for="timeButton">Задержка смены данных: </label>
+    <input
+      type="number"
+      id="timeButton"
+      [ngModelOptions]="{standalone: true}"
+      [(ngModel)]="timeOnButton">
+
+    <button
+      [disabled]="timeStart"
+      (click)="initTime(timeOnButton)">Start</button>
+    <button (click)="stopTime()">Stop</button>
+  </form>
+  <svg></svg>
+</div>
+
+
+
